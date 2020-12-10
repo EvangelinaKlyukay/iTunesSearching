@@ -58,13 +58,37 @@
 			children = (
 				A65DBE9E25823B0A0041980B /* AppDelegate.swift */,
 				A65DBEA025823B0A0041980B /* SceneDelegate.swift */,
-				A65DBEA225823B0A0041980B /* ViewController.swift */,
-				A65DBEA425823B0A0041980B /* Main.storyboard */,
+				A65DBEB625823C270041980B /* Model */,
+				A65DBEB525823C100041980B /* View */,
+				A65DBEB325823C040041980B /* Controller */,
 				A65DBEA725823B0B0041980B /* Assets.xcassets */,
 				A65DBEA925823B0B0041980B /* LaunchScreen.storyboard */,
 				A65DBEAC25823B0B0041980B /* Info.plist */,
 			);
 			path = iTunesSerching;
+			sourceTree = "<group>";
+		};
+		A65DBEB325823C040041980B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A65DBEA225823B0A0041980B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A65DBEB525823C100041980B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A65DBEA425823B0A0041980B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A65DBEB625823C270041980B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
