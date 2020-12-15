@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		A65DBE9F25823B0A0041980B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBE9E25823B0A0041980B /* AppDelegate.swift */; };
 		A65DBEA125823B0A0041980B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBEA025823B0A0041980B /* SceneDelegate.swift */; };
-		A65DBEA325823B0A0041980B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBEA225823B0A0041980B /* ViewController.swift */; };
+		A65DBEA325823B0A0041980B /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBEA225823B0A0041980B /* AlbumViewController.swift */; };
 		A65DBEA625823B0A0041980B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65DBEA425823B0A0041980B /* Main.storyboard */; };
 		A65DBEA825823B0B0041980B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65DBEA725823B0B0041980B /* Assets.xcassets */; };
 		A65DBEAB25823B0B0041980B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65DBEA925823B0B0041980B /* LaunchScreen.storyboard */; };
+		A65DBEBB258378CF0041980B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBEBA258378CF0041980B /* DetailViewController.swift */; };
+		A65DBEC0258387930041980B /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBEBF258387930041980B /* Album.swift */; };
+		A65DBEC3258388070041980B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBEC2258388070041980B /* NetworkManager.swift */; };
+		A65DBED125850BB00041980B /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBED025850BB00041980B /* AlbumCell.swift */; };
+		A65DBED525850F070041980B /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBED425850F070041980B /* Song.swift */; };
+		A65DBED925867EA10041980B /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DBED825867EA10041980B /* DetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A65DBE9B25823B0A0041980B /* iTunesSerching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSerching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65DBE9E25823B0A0041980B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A65DBEA025823B0A0041980B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A65DBEA225823B0A0041980B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A65DBEA225823B0A0041980B /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		A65DBEA525823B0A0041980B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A65DBEA725823B0B0041980B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A65DBEAA25823B0B0041980B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A65DBEAC25823B0B0041980B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65DBEBA258378CF0041980B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A65DBEBF258387930041980B /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		A65DBEC2258388070041980B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A65DBED025850BB00041980B /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		A65DBED425850F070041980B /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A65DBED825867EA10041980B /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			children = (
 				A65DBE9E25823B0A0041980B /* AppDelegate.swift */,
 				A65DBEA025823B0A0041980B /* SceneDelegate.swift */,
+				A65DBEC2258388070041980B /* NetworkManager.swift */,
 				A65DBEB625823C270041980B /* Model */,
 				A65DBEB525823C100041980B /* View */,
 				A65DBEB325823C040041980B /* Controller */,
@@ -71,7 +84,10 @@
 		A65DBEB325823C040041980B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A65DBEA225823B0A0041980B /* ViewController.swift */,
+				A65DBEA225823B0A0041980B /* AlbumViewController.swift */,
+				A65DBED025850BB00041980B /* AlbumCell.swift */,
+				A65DBEBA258378CF0041980B /* DetailViewController.swift */,
+				A65DBED825867EA10041980B /* DetailCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -87,6 +103,8 @@
 		A65DBEB625823C270041980B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A65DBEBF258387930041980B /* Album.swift */,
+				A65DBED425850F070041980B /* Song.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,9 +179,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A65DBEA325823B0A0041980B /* ViewController.swift in Sources */,
+				A65DBED125850BB00041980B /* AlbumCell.swift in Sources */,
+				A65DBED525850F070041980B /* Song.swift in Sources */,
+				A65DBEC3258388070041980B /* NetworkManager.swift in Sources */,
+				A65DBEA325823B0A0041980B /* AlbumViewController.swift in Sources */,
 				A65DBE9F25823B0A0041980B /* AppDelegate.swift in Sources */,
 				A65DBEA125823B0A0041980B /* SceneDelegate.swift in Sources */,
+				A65DBEBB258378CF0041980B /* DetailViewController.swift in Sources */,
+				A65DBEC0258387930041980B /* Album.swift in Sources */,
+				A65DBED925867EA10041980B /* DetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
