@@ -1,5 +1,5 @@
 //
-//  Track.swift
+//  Song.swift
 //  iTunesSerching
 //
 //  Created by Евангелина Клюкай on 12.12.2020.
@@ -7,19 +7,20 @@
 
 import Foundation
 
-struct TrackJSON : Codable {
+struct SongJSON : Codable {
     var resultsCount : Int?
-    var results : [TrackInfo]
+    var results : [SongInfo]
 }
 
-struct TrackInfo : Codable {
+struct SongInfo : Codable {
     var trackName : String?
 }
 
-class Track {
+class Song {
     var trackName: String
 
     init(trackName: String) {
         self.trackName = trackName
     }
 }
+
