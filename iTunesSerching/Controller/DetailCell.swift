@@ -8,10 +8,12 @@
 import UIKit
 
 class DetailCell: UITableViewCell {
-
+    
     @IBOutlet weak var trackName: UILabel!
     
-    func updateCell(track : Song) {
-        trackName.text = track.trackName
+    var track: Song? {
+        didSet {
+            trackName.text = track?.trackName
+        }
     }
 }

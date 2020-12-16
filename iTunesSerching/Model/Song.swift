@@ -7,20 +7,11 @@
 
 import Foundation
 
-struct SongJSON : Codable {
+struct SongRespons : Codable {
     var resultsCount : Int?
-    var results : [SongInfo]
+    var results : [Song]
 }
 
-struct SongInfo : Codable {
+struct Song : Codable {
     var trackName : String?
 }
-
-class Song {
-    var trackName: String
-
-    init(trackName: String) {
-        self.trackName = trackName
-    }
-}
-

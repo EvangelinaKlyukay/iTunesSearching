@@ -9,23 +9,21 @@ import UIKit
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var album : Album!
-    var albmImage : UIImage!
-    var tracks = [Song]()
+    var album: Album!
+    var albmImage: UIImage!
+    private var tracks = [Song]()
     
     @IBOutlet weak var albumNameLabel: UILabel!
-    @IBOutlet weak var albumImage: UIImageView!
+    @IBOutlet weak var albumImage: WebImageView!
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var yearLabel: UILabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        
         tableView.tableFooterView = UIView(frame: .zero)
         updateLabels()
         loadTracks()
@@ -36,8 +34,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         authorNameLabel.text = album.artistName
         genreLabel.text = album.primaryGenreName
         countryNameLabel.text = album.country
-        albumImage.image = albmImage
-        yearLabel.text = album.releaseDate
+        albumImage.load(url: album!.artworkUrl100)
+        yearLabel.text = String(album.releaseDate.prefix(4))
     }
     
     func loadTracks() {
@@ -57,8 +55,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as? DetailCell {
-            cell.updateCell(track: tracks[indexPath.row])
+            let track = tracks[indexPath.item]
+                cell.track = track
+            
             return cell
         }
         return UITableViewCell()
